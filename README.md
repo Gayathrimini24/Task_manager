@@ -1,61 +1,44 @@
-#  TaskFlow Mini
+# 🚀 TaskFlow Mini
 
-A mini **Task Management App** built with **Flutter** to manage **Projects → Tasks → Subtasks**, designed for clean architecture, smooth UX, and structured BLoC state management.
-
----
-
-##  Objective
-
-Build a small task-management app (**TaskFlow Mini**) with the following structure:
-
-> **Projects → Tasks → Subtasks**
-
-The app lets admins and staff manage projects, assign tasks, and track progress efficiently.
+A lightweight **Task Management App** built with **Flutter**, designed to handle **Projects → Tasks → Subtasks** using clean architecture and BLoC pattern.
 
 ---
 
-##  Core Features (MVP)
+## 🎯 Overview
 
-###  1. Projects
-- Create, list, and archive projects.
-- **Fields:** `name`, `description`, `archived (bool)`
+**TaskFlow Mini** helps admins and staff manage projects efficiently through an organized structure:
+> Projects → Tasks → Subtasks  
 
-###  2. Tasks
-- Belong to a project.  
-- **Fields:**  
-  `title`, `description`, `status (todo, inProgress, blocked, inReview, done)`,  
-  `priority (low, medium, high, critical)`,  
-  `startDate`, `dueDate`,  
-  `estimate (hrs)`, `timeSpent (hrs)`,  
-  `labels (tags)`, `assignees (staff)`  
-
-- **Admin:** create/update tasks, assign staff  
-- **Staff:** update task status and time spent  
-
-###  3. Subtasks
-- Belong to a task.  
-- **Fields:** `title`, `status`, `optional assignee`
-
-###  4. Assignment
-- Admin can assign/unassign staff to a task.
-
-###  5. Status Report (per project)
-- Project insights dashboard:
-  - **Tiles:** Total tasks, Done, In Progress, Blocked, Overdue, Completion %
-  - **Table:** Open tasks by assignee
+Each level supports CRUD operations, assignments, and status tracking with visual reports.
 
 ---
 
-##  Tech & Architecture
+## 🧩 Core Features
 
-###  Tech Stack
-- **Framework:** Flutter (Stable, Null-safe Dart)
-- **State Management:** `flutter_bloc` + `equatable`
-- **Navigation:** `go_router` (or `Navigator 2.0`)
-- **Database / Storage:** Local JSON or `Hive` / `Drift`
-- **Theming:** Light/Dark with primary color `#0EA5E9`
+- 🗂️ **Projects** – Create, list, and archive projects  
+- ✅ **Tasks** – Track title, description, status, priority, due dates, time logs, labels, and assignees  
+- 🧱 **Subtasks** – Nested under tasks with individual status and optional assignee  
+- 👥 **Assignment** – Admins can assign/unassign staff  
+- 📊 **Reports** – Show project insights like total, done, blocked, overdue, and completion %
 
 ---
 
-### 🧩 Architecture Overview
+## ⚙️ How to Run
 
+### 🛠 Requirements
+- Flutter SDK (Stable, **3.x or later**)
+- Dart (Null-safety enabled)
+
+### 🧾 Steps
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/Gayathrimini24/Task_manager.git
+
+# 2️⃣ Navigate into the project folder
+cd Task_manager
+
+# 3️⃣ Get dependencies
+flutter pub get
+
+# 4️⃣ Run the app
+flutter run
