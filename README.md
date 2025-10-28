@@ -42,3 +42,19 @@ flutter pub get
 
 # 4️⃣ Run the app
 flutter run
+
+lib/
+ ├── domain/
+ │   ├── models/             # Core entities
+ │   └── repositories/       # Abstract contracts
+ ├── data/
+ │   ├── datasources/        # Local/remote data
+ │   └── repositories/       # Implementations
+ ├── presentation/
+ │   ├── blocs/              # State management
+ │   ├── pages/              # Screens
+ │   └── widgets/            # Reusable UI components
+ └── main.dart               # Entry point
+
+🔄 Data Flow (BLoC Pattern)
+UI → Bloc (Event → State) → Repository → Data Source
